@@ -1,5 +1,5 @@
 import pygame
-from snake2 import game_loop
+
 
 pygame.init()
 Width = 480
@@ -64,7 +64,7 @@ def play():
     running = True
     while running:
         screen.fill(black)
-        back_rect = draw_text("Back", font2, blue, 50, 0)
+        back_rect = draw_text("RETURN", font2, blue, 50, 0)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.exit()
