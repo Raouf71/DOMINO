@@ -1,0 +1,13 @@
+<launch>
+
+    <!-- LAUNCH NODES -->
+    <node pkg="joy" type="joy_node" name="joy_node" output="screen" />
+
+    <!-- <node pkg="my_octomap_package" type="view_octomap" name="view_octomap" output="screen" />  -->
+
+    <node pkg="update_map" type="update_map_node" name="update_map_node" output="screen" /> 
+
+    <!-- LAUNCH Rviz with config -->
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find update_map)/cfg/uav_config.rviz" />
+
+</launch>
